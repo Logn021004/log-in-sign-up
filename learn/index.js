@@ -22,7 +22,7 @@ function checkEmail(e){
         return true
     }
     else if(!emailFormat.test(e)){
-        showError(true,'vui lòng điền đầy đủ các thông tin ')
+        showError(true,'vui lòng điền đầy đủ các thông tin')
         document.getElementById('ErrorEmail').innerText="Email không đúng định dạng"
         return true
     }

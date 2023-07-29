@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+    margin: 0  ;   
+    padding: 0;
+}
+body{
+    font-family: Montserrat,sans-serif,helvetica,clean,sans-serif;
+    color: #5c5c5c;
+}
+::selection{
+    background-color: #92bcba;
+    color: white;
+}
+.modal{
+    position: fixed;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+}
+.modal-body{
+width: 300px;
+height: 300px;
+background-color: #fff;
+margin: auto;
+z-index: 1;
+padding: 0px 14px;
+
+}
+.header-form{
+    display: flex;
+    border: 1px solid #d5d5d5;
+    border-radius: 3px ;
+    height: 35px;
+}
+.btn-header-form{
+    width: 50%;
+    text-align: center;
+
+}
+.btn-header-form button{
+    width: 100%;
+    height:97%;
+    background-color: #fff;
+    border: none;
+    color: #5c5c5c;
+    cursor: pointer;
+}
+.btn-header-form button:hover{
+    background-color: #f5f9f8;
+    transition: 0.6s;
+}
+.btn-header-form.btn-create button{
+    color: #92bcba;
+    border-bottom: 2px solid #92bcba;
+    border-radius: 0px 0px 2px 2px;
+    transition: 0.6s;
+}
+.note{
+    line-height: 14px;
+    font-size: 0.7rem;
+    margin: 15px 0px ;
+}
+.form-input{
+    height: 160px;
+    margin-bottom: 35px;
+}
+.form-input-field{
+    width: 100%;
+    height: 30px;
+    margin-bottom: 34px;
+}
+.input-field{
+    width: 100%;
+   line-height: 20px;
+    border: 1px solid #d5d5d5;
+    border-radius: 3px;
+    padding: 10px;
+    outline: none;
+}
+.input-field:focus{
+    border: 1px solid  #92bcba;
+}
+.form-input-field small{
+    display: none;
+    padding-left: 8px;
+    padding-top: 3px;
+    font-size: 0.7rem;
+}
+.note-pass{
+    padding: 10px;
+    font-size: 0.6rem;
+    background-color: #f5f9f8;
+    height: 90px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+.note-pass-content{
+    list-style: none;
+    margin-top: 6px;
+    margin-left: 8px;
+}
+.lis-notepass i{
+    background-color: #b9b9b9;
+    color: white;
+    border-radius: 50%;
+    font-size: 0.7rem;
+    width: 12px;
+    height: 12px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+.lis-notepass{
+    margin: 5px 0;
+}
+.send-submit{
+    width: 100%;
+    line-height: 30px;
+    color: white;
+    background-color: #92bcba;
+    font-weight: 700;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+.send-submit:hover{
+    background-color: #7c9f9e;
+}
+.footer{
+    font-size: 0.58rem;
+}
+.footer-content{
+    color: #92bcba;
+    text-decoration: none;
+}
+.footer-content:hover{
+    border-bottom: 1px solid #92bcba ;
+}

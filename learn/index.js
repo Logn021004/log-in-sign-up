@@ -19,12 +19,11 @@ function checkEmail(e){
     let emailFormat=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     e=e.trim(   )
     if(e==''){
-        showError(true,'Khong duoc de trong ')
+        showError(true,'vui lòng điền đầy đủ các thông tin')
         return true
     }
     else if(!emailFormat.test(e)){
-        console.log('loi email')
-        showError(true,'vui long xem lai thong tin')
+        showError(true,'vui lòng điền đầy đủ các thông tin ')
         document.getElementById('ErrorEmail').innerText="Email không đúng định dạng"
         return true
     }
@@ -35,7 +34,7 @@ function checkEmail(e){
 }
 function checkPass(e){
     if(e==''){
-        showError(true,'Khong duoc de trong')
+        showError(true,'vui lòng điền đầy đủ các thông tin')
         return true
     }
     else if(e.length<8)

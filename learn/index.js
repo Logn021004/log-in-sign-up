@@ -11,7 +11,6 @@ function sendSubmit(){
         return
     }                   
     else{
-        alert='Tạo thành công!'
         window.location.href='https://soundcloud.com/discover'
     }
 }

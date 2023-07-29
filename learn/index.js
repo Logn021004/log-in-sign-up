@@ -9,7 +9,7 @@ function sendSubmit(){
     else if(checkPass(passvalue.value)){
         checkPass(passvalue.value)
         return
-    }
+    }                  
     else{
         alert='Tạo thành công!'
         window.location.href='https://soundcloud.com/discover'

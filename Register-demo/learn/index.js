@@ -1,4 +1,11 @@
 
+function Create(){
+   window.location.href='index.html'
+}
+function signin(){
+    window.location.href='signin.html'
+}
+
 function sendSubmit(){
     let EmailValue=document.getElementById('email')
     let passvalue=document.getElementById('Password')
@@ -11,7 +18,29 @@ function sendSubmit(){
         return
     }                   
     else{
-        window.location.href='https://soundcloud.com/discover'
+        let keyEmail ={
+            email:EmailValue.value,
+            pass:passvalue.value,
+        };
+        let json=JSON.stringify(keyEmail)
+        localStorage.setItem(EmailValue.value,json)
+        alert("tạo account thành công!")
+        window.location.href='signin.html'
+    }
+}
+function Login(){
+    let EmailValue=document.getElementById('email')
+    let passvalue=document.getElementById('Password')
+    let user =localStorage.getItem(EmailValue.value)
+    let data=JSON.parse(user)
+    if(user==null){
+        alert('tài khoản không tồn tại')
+    }
+    else if(passvalue.value!=data.pass){
+        alert('sai mật khẩu đăng nhập')
+    }
+    else if(EmailValue.value==data.email && passvalue.value==data.pass){
+        alert('Đăng nhập thành công')
     }
 }
 function checkEmail(e){

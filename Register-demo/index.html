@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>học JS</title>
+    <script src="./Register-demo/css-js/index.js"></script>
+     <link rel="stylesheet" href="./Register-demo/css-js/main.css">
+    <!-- Bootstrap -->
+    <!-- Font Awasome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+    <div class="modal">   
+        
+        <div class="modal-body">
+            <div class="modal-content"> 
+                <div class="header-form">
+                    <div class="btn-header-form" style="border-right: none;">
+                        <button onclick="signin()">Sign in</button>
+                    </div>
+                    <div class="btn-header-form btn-create" style="border-left: none;">
+                        <button>Create account</button>
+                    </div>
+                </div>
+            </div>
+            <p class="note">Create an account to manage your orders and check out faster.
+            </p>
+            <div class="form-input">
+                <div class="form-input-field">
+                    <input type="text" class="input-field" placeholder="Your Email" id="email">
+                    <small  class="Error" id="ErrorEmail"></small>
+                </div>
+                <div class="form-input-field">
+                    <input type="password" class="input-field" placeholder="Password" id="Password">
+                    <small class="Error" id="ErrorPass"></small>
+                </div>
+                <div class="form-input-field">
+                    <input type="password" class="input-field" placeholder="Nhập lại Password" id="Enter-Password">
+                    <small class="Error" id="ErrorEnterPass"></small>
+                </div>
+            </div>
+            <div class="note-pass">
+                <span>Please make sure your password includes:</span>
+                <ul class="note-pass-content">
+                    <li class="lis-notepass">
+                        <i class="fas fa-times"></i>
+                        <span>At least 8 characters</span>
+                    </li>
+                    <li class="lis-notepass">
+                        <i class="fas fa-times"></i>
+                        <span>At least 1 letter (a-z, A-Z)
+                        </span>
+                    </li>
+                    <li class="lis-notepass">
+                        <i class="fas fa-times"></i>
+                        <span>At least 1 number (0-9)</span>
+                    </li>
+                </ul>
+            </div>
+            <button class="send-submit" onclick="sendSubmit()">CREATA MY ACCOUNT</button>
+            <div class="footer">
+                By signing up, you are agreeing to our <a href="#" class="footer-content">Terms </a> and <a href="#"
+                    class="footer-content">Privacy Policy.
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

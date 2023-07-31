@@ -35,7 +35,11 @@ function Login(){
     let passvalue=document.getElementById('Password')
     let user =localStorage.getItem(EmailValue.value)
     let data=JSON.parse(user)
-    if(user==null){
+
+    if(EmailValue.value==null ||passvalue.value==null){
+       alert('điền thông tin đăng nhập')
+    }
+    else if(user==null){
         alert('tài khoản không tồn tại')
     }
     else if(passvalue.value!=data.pass){
@@ -43,6 +47,7 @@ function Login(){
     }
     else if(EmailValue.value==data.email && passvalue.value==data.pass){
         alert('Đăng nhập thành công')
+        window.location.href='main.html'
     }
 }
 function checkEmail(e){

@@ -36,12 +36,12 @@ function Login(){
     let user =localStorage.getItem(EmailValue.value)
     let data=JSON.parse(user)
 
-    if(EmailValue.value==null ||passvalue.value==null){
+    if(EmailValue.value==''||passvalue.value==''){
        alert('điền thông tin đăng nhập')
     }
     else if(user==null){
         alert('tài khoản không tồn tại')
-    }
+     }
     else if(passvalue.value!=data.pass){
         alert('sai mật khẩu đăng nhập')
     }

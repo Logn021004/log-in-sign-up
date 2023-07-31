@@ -4,11 +4,13 @@ function Create(){
 }
 function signin(){
     window.location.href='signin.html'
-}
+}  
 
 function sendSubmit(){
     let EmailValue=document.getElementById('email')
     let passvalue=document.getElementById('Password')
+    let user =localStorage.getItem(EmailValue.value)
+    let data =JSON.parse(user)
     if(checkEmail(EmailValue.value)){
         checkEmail(EmailValue.value)
         return
@@ -16,7 +18,7 @@ function sendSubmit(){
     else if(checkPass(passvalue.value)){
         checkPass(passvalue.value)
         return
-    }                   
+    }                 
     else{
         let keyEmail ={
             email:EmailValue.value,
@@ -46,6 +48,7 @@ function Login(){
 function checkEmail(e){
     let emailFormat=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     e=e.trim(   )
+    let user=localStorage.getItem(e)
     if(e==''){
         showError(true,'vui lòng điền đầy đủ các thông tin')
         return true
@@ -53,6 +56,11 @@ function checkEmail(e){
     else if(!emailFormat.test(e)){
         showError(true,'vui lòng điền đầy đủ các thông tin')
         document.getElementById('ErrorEmail').innerText="Email không đúng định dạng"
+        return true
+    }
+    else if(user!=null){
+        showError(true,'vui long xem trai thong tin')
+        document.getElementById('ErrorEmail').innerText="Email đã tồn tại"
         return true
     }
      else{
